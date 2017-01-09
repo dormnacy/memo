@@ -1,0 +1,12 @@
+* INSTALL [[http://www.rabbitmq.com/configure.html][offical website]]
+  :PROPERTIES:
+  :version:  3.6.0
+  :END:
+** 配置文件& 默认变量位置
+   1. sbin/rabbitmq-defaults 这个文件设置了默认变量和  CONFIG_FILE &  CONF_ENV_FILE 位置
+   2. config env file 中的 RABBITMQ_NODENAME 这个变量需注意 hostname 如下所示：
+      #+BEGIN_SRC shell
+      //其中nodename可以自定义
+      //hostname 需要和在shell 中 `hostname -s` 命令返回值一致 
+      RABBITMQ_NODENAME=nodename@hostname
+      #+END_SRC
